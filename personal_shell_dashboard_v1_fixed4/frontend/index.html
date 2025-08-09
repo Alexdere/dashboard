@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Shell Dashboard — V1</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="ambient">
+      <div id="clock"></div>
+      <div id="weather"></div>
+      <div id="footer"><div id="rss-ticker"><span id="rss-inner"></span></div></div>
+    </div>
+
+    <div id="terminal">
+      <div id="output" aria-live="polite" aria-atomic="false"></div>
+      <div id="input-row">
+        <div id="prompt">&gt;</div>
+        <input id="cmd" type="text" autocomplete="off" spellcheck="false" aria-label="Command input" />
+      </div>
+    </div>
+
+    <div id="panel-llmchat" class="panel hidden" role="dialog" aria-modal="true">
+      <div class="panel-header">LLM Chat — Esc to return</div>
+      <div id="llm-log"></div>
+      <div class="panel-input">
+        <input id="llm-input" type="text" placeholder="Type a message…" autocomplete="off" spellcheck="false" aria-label="LLM message input" />
+      </div>
+    </div>
+
+    <div id="panel-notes" class="panel hidden" role="dialog" aria-modal="true">
+      <div class="panel-header">Notes — Ctrl+S save, Esc to return</div>
+      <div class="panel-subheader">
+        <span id="note-title"></span>
+      </div>
+      <textarea id="note-editor" aria-label="Note editor"></textarea>
+      <div class="panel-footer">Use shell commands like: notes new "Title" or notes open "Title"</div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

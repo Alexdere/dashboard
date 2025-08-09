@@ -1,0 +1,14 @@
+{
+  "openai": {
+    "api_key": "",
+    "model": "gpt-4o-mini"
+  },
+  "openweather": {
+    "api_key": "",
+    "city": "Oslo",
+    "units": "metric"
+  },
+  "rss_feeds": [
+    "https://news.ycombinator.com/rss"
+  ]
+}
